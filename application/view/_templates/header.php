@@ -54,7 +54,29 @@
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="<?php echo Config::get('URL'); ?>Register/index">Register</a></li>
 	        <li><a href="<?php echo Config::get('URL'); ?>login/index">Login</a></li>
-	      </ul>
-	    </div>
-	  </div>
-    </nav>
+	      
+	      <li class="dropdown">
+	      	<?php if (Session::userIsLoggedIn()) : ?>
+            	<li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
+	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account <span class="caret"></span></a>
+	          			<ul class="dropdown-menu">
+	            			<li><a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a></li>
+	            			<li><a href="<?php echo Config::get('URL'); ?>user/editAvatar">Edit your avatar</a></li>
+	            			<li><a href="<?php echo Config::get('URL'); ?>user/editusername">Edit my username</a></li>
+	            			<li><a href="<?php echo Config::get('URL'); ?>user/edituseremail">Edit my email</a></li>
+	            			<li><a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a></li>
+	            			<li><a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a></li>
+
+	            			<?php if (Session::get("user_account_type") == 7) : ?>
+                				<li <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> >
+                   				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
+                				</li>
+            				<?php endif; ?>
+        	<?php endif; ?>
+        </ul>
+	   </ul>
+	  </li>
+	 </ul>
+	</div>
+   </div>
+  </nav>   
