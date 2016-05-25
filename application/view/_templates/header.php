@@ -40,7 +40,6 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home</a></li>
 	        <li class="dropdown">
 	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Posts <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
@@ -48,16 +47,13 @@
 	            <li><a href="#">Old</a></li>
 	          </ul>
 	        </li>
-	        <li><a href="#">Index</a></li>
-	        <li><a href="#">Profiles</a></li>
-	        <li><a href="#">Dashboard</a></li>
-	        <li><a href="#">My Notes</a></li>
-	        <li><a href="#">My Acount</a></li>
-	        <li><a href="#">Admin</a></li>
+	        <li><a href="<?php echo Config::get('URL'); ?>index/index">Home</a></li>
+	        <li><a href="<?php echo Config::get('URL'); ?>profile/index">Profiles</a></li>
+	        
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	        <li><a href="<?php echo Config::get('URL'); ?>Register/index">Register</a></li>
+	        <li><a href="<?php echo Config::get('URL'); ?>login/index">Login</a></li>
 	      </ul>
 	    </div>
 	  </div>
