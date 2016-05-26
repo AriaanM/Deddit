@@ -52,8 +52,10 @@
 	        
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="<?php echo Config::get('URL'); ?>Register/index">Register</a></li>
-	        <li><a href="<?php echo Config::get('URL'); ?>login/index">Login</a></li>
+<?php 		 if (!Session::userIsLoggedIn()) : ?>
+		        <li><a href="<?php echo Config::get('URL'); ?>Register/index">Register</a></li>
+		        <li><a href="<?php echo Config::get('URL'); ?>login/index">Login</a></li>
+<?php 		 endif ;?>
 	      
 	      <li class="dropdown">
 	      	<?php if (Session::userIsLoggedIn()) : ?>
