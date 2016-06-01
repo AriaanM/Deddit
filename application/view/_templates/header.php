@@ -36,7 +36,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>                        
 	      </button>
-	      <a class="navbar-brand" href="#">Deddit</a>
+	      <a class="navbar-brand">Deddit</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
@@ -62,18 +62,18 @@
             	<li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
 	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account <span class="caret"></span></a>
 	          			<ul class="dropdown-menu">
-	            			<li><a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a></li>
 	            			<li><a href="<?php echo Config::get('URL'); ?>user/editAvatar">Edit your avatar</a></li>
 	            			<li><a href="<?php echo Config::get('URL'); ?>user/editusername">Edit my username</a></li>
 	            			<li><a href="<?php echo Config::get('URL'); ?>user/edituseremail">Edit my email</a></li>
 	            			<li><a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a></li>
-	            			<li><a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a></li>
 
 	            			<?php if (Session::get("user_account_type") == 7) : ?>
                 				<li <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> >
                    				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
+                   				<a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>	
                 				</li>
             				<?php endif; ?>
+            				<li><a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a></li>
         	<?php endif; ?>
         </ul>
 	   </ul>
