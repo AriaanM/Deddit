@@ -84,7 +84,7 @@ class AvatarModel
      */
     public static function isAvatarFolderWritable()
     {
-        if (is_dir(Config::get('PATH_AVATARS')) AND is_writable(Config::get('PATH_AVATARS'))) {
+        if (is_dir(Config::get('PATH_POST-IMAGE')) AND is_writable(Config::get('PATH_POST-IMAGE'))) {
             return true;
         }
 

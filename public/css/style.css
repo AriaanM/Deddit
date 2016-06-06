@@ -1,7 +1,10 @@
+
+
 body {
     font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
+    color:#111115;
 }
 .wrapper {
     width: 960px;
@@ -11,8 +14,6 @@ body {
    
     width: 315px;
     height: 204px;
-    /* To keep this project compact, we show a base64-encoded image, not a real file. */
-    /* Excellent base64-encoders and more information here: http://base64image.org and http://www.base64-image.de */
     background-image: url('pingu.png');
     background-repeat:no-repeat;
     margin: auto;
@@ -37,7 +38,7 @@ body {
     background-color:gray;
 }
 .container a {
-    color: #454545;
+    color: #111115;
 }
 .container table {
     font-size: 11px;
@@ -217,4 +218,9 @@ body {
 /* error page */
 .red-text {
     color: red;
+}
+
+nav.navbar navbar-inverse {
+    padding:0px !important;
+    margin:0px !important;
 }

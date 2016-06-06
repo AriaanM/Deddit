@@ -362,7 +362,7 @@ class LoginModel
         }
 
         // delete remember_me cookie in browser
-        setcookie('remember_me', false, time() - (3600 * 24 * 3650), Config::get('COOKIE_PATH'),
+        setcookie('remember_me', false, time() - (3600 * 24 * 3), Config::get('COOKIE_PATH'),
             Config::get('COOKIE_DOMAIN'), Config::get('COOKIE_SECURE'), Config::get('COOKIE_HTTP'));
     }
 

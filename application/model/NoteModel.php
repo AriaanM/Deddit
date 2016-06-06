@@ -14,7 +14,7 @@ class NoteModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id";
+        $sql = "SELECT user_id, note_id, note_text FROM posts WHERE user_id = :user_id";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 
@@ -31,7 +31,7 @@ class NoteModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id AND note_id = :note_id LIMIT 1";
+        $sql = "SELECT user_id, note_id, note_text FROM posts WHERE user_id = :user_id AND note_id = :note_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id'), ':note_id' => $note_id));
 
@@ -53,7 +53,7 @@ class NoteModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+        $sql = "INSERT INTO posts (note_text, user_id) VALUES (:note_text, :user_id)";
         $query = $database->prepare($sql);
         $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
 
@@ -80,7 +80,7 @@ class NoteModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE notes SET note_text = :note_text WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE posts SET note_text = :note_text WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':note_id' => $note_id, ':note_text' => $note_text, ':user_id' => Session::get('user_id')));
 
@@ -105,7 +105,7 @@ class NoteModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM notes WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "DELETE FROM posts WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':note_id' => $note_id, ':user_id' => Session::get('user_id')));
 
