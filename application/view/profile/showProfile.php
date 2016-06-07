@@ -35,8 +35,7 @@
                             <td><?= $this->user->user_fname; ?></td>
                             <td><?= $this->user->user_email; ?></td>
                             <td><?= ($this->user->user_active == 0 ? 'No' : 'Yes'); ?></td>
-                            <td><?= $this->user->user_age; ?></td>
-                            
+
 
                         </tr>
                     </tbody>
