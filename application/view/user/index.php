@@ -56,6 +56,9 @@
             <input type="file" name="avatar_file" required />
             <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
             <input type="submit" value="Upload image" />
+            
+            <h3>Delete your avatar</h3>
+            <p>Click this link to delete your (local) avatar: <a href="<?php echo Config::get('URL'); ?>user/deleteAvatar_action">Delete your avatar</a>
         </form>
         </div>
     <br>
