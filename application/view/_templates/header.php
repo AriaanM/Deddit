@@ -11,12 +11,6 @@
 
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  
-	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
-	  
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	  
-	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	</head>
 	<body>
@@ -27,54 +21,41 @@
 	        <div class="logo"></div>
 
 	        <!-- navigation -->
-	        
-	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>                        
-	      </button>
-	      <a class="navbar-brand">Deddit</a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav">
-	        <li class="dropdown">
-	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Posts <span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">New</a></li>
-	            <li><a href="#">Old</a></li>
-	          </ul>
-	        </li>
-	        <li><a href="<?php echo Config::get('URL'); ?>index/index">Home</a></li>
-	        <li><a href="<?php echo Config::get('URL'); ?>profile/index">Profiles</a></li>
-	        
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
+		
+			<a href="/deddit/index"><h3 class="w3-btn w3-red">Deddit</h3></a>
+		<div class="w3-dropdown-hover">
+			<h3 class="w3-btn w3-red">Posts</h3>
+			<div class="w3-dropdown-content w3-border">
+			<a href="">Old</a>
+			<a href="#">New</a>
+			<a href="#">Random</a>
+			</div>
+		</div>
+			<h3 class="w3-btn w3-red">Profiles</h3>
+			<div class="w3-dropdown-hover">
+			<a href="myaccount"><h3 class="w3-btn w3-red right">My Account</h3></a>
+			<div class="w3-dropdown-content w3-border">
 <?php 		 if (!Session::userIsLoggedIn()) : ?>
-		        <li><a href="<?php echo Config::get('URL'); ?>Register/index">Register</a></li>
-		        <li><a href="<?php echo Config::get('URL'); ?>login/index">Login</a></li>
+		    <a href="<?php echo Config::get('URL'); ?>Register/index">Register</a>
+		    <a href="<?php echo Config::get('URL'); ?>login/index">Login </a>
 <?php 		 endif ;?>
-	      
-	      <li class="dropdown">
-	      	<?php if (Session::userIsLoggedIn()) : ?>
-            	<li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
-	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account <span class="caret"></span></a>
-	          			<ul class="dropdown-menu">
-	            			<li><a href="<?php echo Config::get('URL'); ?>user/editAvatar">Edit your avatar</a></li>
-	            			<li><a href="<?php echo Config::get('URL'); ?>user/editusername">Edit my username</a></li>
-	            			<li><a href="<?php echo Config::get('URL'); ?>user/edituseremail">Edit my email</a></li>
-	            			<li><a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a></li>
+<?php if (Session::userIsLoggedIn()) : ?>
+	<?php if (View::checkForActiveController($filename, "user")) ?>
+      			<a href="<?php echo Config::get('URL'); ?>user/editAvatar">Edit your avatar</a>
+    			<a href="<?php echo Config::get('URL'); ?>user/editusername">Edit my username</a>
+    			<a href="<?php echo Config::get('URL'); ?>user/edituseremail">Edit my email</a>
+    			<a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a>
 
-	            			<?php if (Session::get("user_account_type") == 7) : ?>
-                				<li <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> >
-                   				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
-                   				<a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>	
-                				</li>
-            				<?php endif; ?>
-            				<li><a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a></li>
-        	<?php endif; ?>
+    			<?php if (Session::get("user_account_type") == 7) : ?>
+    			 <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> 
+       				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
+       				<a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>	
+    				
+				<?php endif; ?>
+				<a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
+<?php endif; ?>
+
+
         </ul>
 	   </ul>
 	  </li>
