@@ -31,7 +31,7 @@
 			<a href="#">Random</a>
 			</div>
 		</div>
-			<h3 class="w3-btn w3-red">Profiles</h3>
+			<a href="profiles/index"><h3 class="w3-btn w3-red">Profiles</h3></a>
 			<div class="w3-dropdown-hover">
 			<a href="myaccount"><h3 class="w3-btn w3-red right">My Account</h3></a>
 			<div class="w3-dropdown-content w3-border">
@@ -41,13 +41,9 @@
 <?php 		 endif ;?>
 <?php if (Session::userIsLoggedIn()) : ?>
 	<?php if (View::checkForActiveController($filename, "user")) ?>
-      			<a href="<?php echo Config::get('URL'); ?>user/editAvatar">Edit your avatar</a>
-    			<a href="<?php echo Config::get('URL'); ?>user/editusername">Edit my username</a>
-    			<a href="<?php echo Config::get('URL'); ?>user/edituseremail">Edit my email</a>
-    			<a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a>
 
     			<?php if (Session::get("user_account_type") == 7) : ?>
-    			 <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> 
+    			 <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> >
        				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
        				<a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>	
     				
