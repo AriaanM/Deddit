@@ -7,7 +7,7 @@
  */
 class RegistrationModel
 {
-	/**
+	/**--
 	 * Handles the entire registration process for DEFAULT users (not for people who register with
 	 * 3rd party services, like facebook) and creates a new user in the database if everything is fine
 	 *

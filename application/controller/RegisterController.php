@@ -18,7 +18,7 @@ class RegisterController extends Controller
 
     /**
      * Register page
-     * Show the register form, but redirect to main-page if user is already logged-in
+     * Show the register form, but redirect to main-page if user
      */
     public function index()
     {
