@@ -26,7 +26,7 @@
 		<div class="w3-dropdown-hover">
 			<a href="<?php echo Config::get('URL'); ?>post/index"><h3 class="w3-btn w3-red">Posts</h3></a>
 			<div class="w3-dropdown-content w3-border">
-			<a href="#">Old</a>
+			<a href="">Old</a>
 			<a href="#">New</a>
 			<a href="#">Random</a>
 			</div>
