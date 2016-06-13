@@ -110,8 +110,12 @@ return array(
 	'USE_GRAVATAR' => false,
 	'GRAVATAR_DEFAULT_IMAGESET' => 'mm',
 	'GRAVATAR_RATING' => 'pg',
+
+	
 	'AVATAR_SIZE' => 44,
 	'AVATAR_JPEG_QUALITY' => 85,
+
+
 	'AVATAR_DEFAULT_IMAGE' => 'default.jpg',
     /**
      * Configuration for: Encryption Keys
@@ -133,13 +137,13 @@ return array(
 	 * EMAIL_SMTP_AUTH: leave this true unless your SMTP service does not need authentication
 	 */
 	'EMAIL_USED_MAILER' => 'phpmailer',
-	'EMAIL_USE_SMTP' => false,
+	'EMAIL_USE_SMTP' => true,
 	'EMAIL_SMTP_HOST' => 'yourhost',
-	'EMAIL_SMTP_AUTH' => true,
-	'EMAIL_SMTP_USERNAME' => 'yourusername',
-	'EMAIL_SMTP_PASSWORD' => 'yourpassword',
-	'EMAIL_SMTP_PORT' => 465,
-	'EMAIL_SMTP_ENCRYPTION' => 'ssl',
+	'EMAIL_SMTP_AUTH' => false,
+	'EMAIL_SMTP_USERNAME' => '',
+	'EMAIL_SMTP_PASSWORD' => '',
+	'EMAIL_SMTP_PORT' => 25,
+	'EMAIL_SMTP_ENCRYPTION' => false,
 	/**
 	 * Configuration for: Email content data
 	 */
