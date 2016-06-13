@@ -17,7 +17,7 @@
 	    <!-- wrapper, to center website -->
 	    <div class="wrapper">
 
-	        <!-- logo -->
+	        <!--- logo --->
 	        <div class="logo"></div>
 
 	        <!-- navigation -->
