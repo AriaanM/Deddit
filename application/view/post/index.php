@@ -4,7 +4,13 @@
 
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
-		<h3><a href="create.php"> Make your own post!</a></h3>
+
+        <p>
+            <form method="post" action="<?php echo Config::get('URL');?>post/create">
+                <label>Text of new post: </label><input type="text" name="post_text" />
+                <input type="submit" value='Create this post' autocomplete="off" />
+            </form>
+        </p>
         <?php if ($this->post) { ?>
                     <?php foreach($this->post as $key => $value) { ?>
                         <tr>
