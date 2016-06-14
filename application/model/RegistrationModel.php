@@ -7,7 +7,7 @@
  */
 class RegistrationModel
 {
-	/**--
+	/**
 	 * Handles the entire registration process for DEFAULT users (not for people who register with
 	 * 3rd party services, like facebook) and creates a new user in the database if everything is fine
 	 *
@@ -17,14 +17,13 @@ class RegistrationModel
 	{
 		// clean the input
 		$user_name = strip_tags(Request::post('user_name'));
-		$user_birthdate = strip_tags(Request::post('user_name'));
 		$user_email = strip_tags(Request::post('user_email'));
 		$user_email_repeat = strip_tags(Request::post('user_email_repeat'));
 		$user_password_new = Request::post('user_password_new');
 		$user_password_repeat = Request::post('user_password_repeat');
 
 		// stop registration flow if registrationInputValidation() returns false (= anything breaks the input check rules)
-		$validation_result = self::registrationInputValidation(Request::post('captcha'), $user_fname, $user_name, $user_password_new, $user_password_repeat, $user_email, $user_email_repeat);
+		$validation_result = self::registrationInputValidation(Request::post('captcha'), $user_name, $user_password_new, $user_password_repeat, $user_email, $user_email_repeat);
 		if (!$validation_result) {
 			return false;
 		}
@@ -206,12 +205,10 @@ class RegistrationModel
 		$database = DatabaseFactory::getFactory()->getConnection();
 
 		// write new users data into database
-		$sql = "INSERT INTO users (user_fname, user_name, user_birthdate, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type)
-                    VALUES (:user_fname,:user_name, :user_birthdate :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type)";
+		$sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type)
+                    VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type)";
 		$query = $database->prepare($sql);
-		$query->execute(array(':user_fname' => $user_fname,
-							  ':user_name' => $user_name,
-							  ':user_birthdate' => $user_birthdate,
+		$query->execute(array(':user_name' => $user_name,
 		                      ':user_password_hash' => $user_password_hash,
 		                      ':user_email' => $user_email,
 		                      ':user_creation_timestamp' => $user_creation_timestamp,

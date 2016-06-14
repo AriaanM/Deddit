@@ -60,7 +60,7 @@ return array(
 	 * DB_PASS The password
 	 * DB_PORT The mysql port, 3306 by default (?), find out via phpinfo() and look for mysqli.default_port.
 	 * DB_CHARSET The charset, necessary for security reasons. Check Database.php class for more info.
-	 *///
+	 */
 	'DB_TYPE' => 'mysql',
 	'DB_HOST' => '127.0.0.1',
 	'DB_NAME' => 'deddit',
@@ -110,12 +110,8 @@ return array(
 	'USE_GRAVATAR' => false,
 	'GRAVATAR_DEFAULT_IMAGESET' => 'mm',
 	'GRAVATAR_RATING' => 'pg',
-
-	
 	'AVATAR_SIZE' => 44,
 	'AVATAR_JPEG_QUALITY' => 85,
-
-
 	'AVATAR_DEFAULT_IMAGE' => 'default.jpg',
     /**
      * Configuration for: Encryption Keys
@@ -137,13 +133,13 @@ return array(
 	 * EMAIL_SMTP_AUTH: leave this true unless your SMTP service does not need authentication
 	 */
 	'EMAIL_USED_MAILER' => 'phpmailer',
-	'EMAIL_USE_SMTP' => true,
+	'EMAIL_USE_SMTP' => false,
 	'EMAIL_SMTP_HOST' => 'yourhost',
-	'EMAIL_SMTP_AUTH' => false,
-	'EMAIL_SMTP_USERNAME' => '',
-	'EMAIL_SMTP_PASSWORD' => '',
-	'EMAIL_SMTP_PORT' => 25,
-	'EMAIL_SMTP_ENCRYPTION' => false,
+	'EMAIL_SMTP_AUTH' => true,
+	'EMAIL_SMTP_USERNAME' => 'yourusername',
+	'EMAIL_SMTP_PASSWORD' => 'yourpassword',
+	'EMAIL_SMTP_PORT' => 465,
+	'EMAIL_SMTP_ENCRYPTION' => 'ssl',
 	/**
 	 * Configuration for: Email content data
 	 */
