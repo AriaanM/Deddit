@@ -223,10 +223,17 @@ nav.navbar navbar-inverse {
     margin:0px !important;
 }
 
+.post {
+    background-color:white;
+    margin:20px;
+    padding:5px;
+    border-radius:10px;
+}
+
 /* navigation dropdown menu */
 
 .w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
-.w3-dropdown-hover:hover .w3-dropdown-content{display:block;z-index:1}
+.w3-dropdown-hover:hover .w3-dropdown-content{display:block;z-index:1;}
 .w3-dropdown-content{cursor:auto;color:#000;background-color:#330000;display:none;position:absolute;min-width:px;margin:0;padding:0;top:46px}
 .w3-dropdown-content a{padding:6px 16px;display:block}
 .w3-dropdown-content a:hover{background-color:#660000}
