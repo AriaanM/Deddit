@@ -1,5 +1,3 @@
-
-
 body {
     font-family: Arial, sans-serif;
     font-weight: 400;
@@ -79,11 +77,6 @@ body {
     background-color: #222;
     color: #fff;
 }
-
-
-
-/* navigation dropdown menu */
-
 
 /* overview */
 .overview-table img {
@@ -224,6 +217,8 @@ nav.navbar navbar-inverse {
     padding:0px !important;
     margin:0px !important;
 }
+
+/* navigation dropdown menu */
 
 .w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
 .w3-dropdown-hover:hover .w3-dropdown-content{display:block;z-index:1}
