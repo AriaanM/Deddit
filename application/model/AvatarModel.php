@@ -4,7 +4,7 @@ class AvatarModel
 {
     /**
      * Gets a gravatar image link from given email address
-     *-
+     *
      * Gravatar is the #1 (free) provider for email address based global avatar hosting.
      * The URL (or image) returns always a .jpg file ! For deeper info on the different parameter possibilities:
      * @see http://gravatar.com/site/implement/images/
@@ -84,7 +84,7 @@ class AvatarModel
      */
     public static function isAvatarFolderWritable()
     {
-        if (is_dir(Config::get('PATH_POST-IMAGE')) AND is_writable(Config::get('PATH_POST-IMAGE'))) {
+        if (is_dir(Config::get('PATH_AVATARS')) AND is_writable(Config::get('PATH_AVATARS'))) {
             return true;
         }
 
