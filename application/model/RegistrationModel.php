@@ -7,7 +7,7 @@
  */
 class RegistrationModel
 {
-	/**--
+	/**
 	 * Handles the entire registration process for DEFAULT users (not for people who register with
 	 * 3rd party services, like facebook) and creates a new user in the database if everything is fine
 	 *
@@ -208,8 +208,7 @@ class RegistrationModel
 		$sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type)
                     VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type)";
 		$query = $database->prepare($sql);
-		$query->execute(array(
-							  ':user_name' => $user_name,
+		$query->execute(array(':user_name' => $user_name,
 		                      ':user_password_hash' => $user_password_hash,
 		                      ':user_email' => $user_email,
 		                      ':user_creation_timestamp' => $user_creation_timestamp,
