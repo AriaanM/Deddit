@@ -8,6 +8,8 @@ class postController extends Controller
     public function __construct()
     {
         parent::__construct();
+
+        //Auth::checkAuthentication();
     }
 
     /**
@@ -21,9 +23,16 @@ class postController extends Controller
     }
 
     public function create()
-{
-    NoteModel::createNote(Request::post('note_text'));
-    Redirect::to('note');
-}
+    {
+        PostModel::createPost(Request::post('post_title'), Request::post('post_text'));
+        Redirect::to('post');
+    }
+
+    public function read($post_id)
+    {
+        $this->View->render('post/read', array(
+            'post' => PostModel::getPost($post_id)
+        ));
+    }
 }
  
