@@ -3,10 +3,12 @@ body {
     font-weight: 400;
     font-size: 14px;
     color:#111115;
+    background-image:url('background.jpg');
 }
 
 a{
     color: white;
+    text-decoration:none;
 }
 
 .wrapper {
@@ -34,7 +36,6 @@ a{
 
 .container {
     max-width: 960px;
-    border: 1px solid #ccc;
     border-radius:10px;
     padding: 20px;
     margin: 0px 0 30px 0;
@@ -240,4 +241,4 @@ nav.navbar navbar-inverse {
 .w3-dropdown-content a{padding:6px;display:block}
 .w3-dropdown-content a:hover{background-color:#660000}
 .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#900000!important}
-.w3-btn,.w3-btn-block{border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-btn,.w3-btn-block{border:solid black 2px; border-radius:5%;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:normal;white-space:nowrap}
