@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Deddit - The new way of posting info on the internet</title>
+    
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://localhost/deddit/favicon.ico"/>
+
     <!-- META -->
     <meta charset="utf-8">
     <!-- send empty favicon fallback to prevent user's browser hitting the server for lots of favicon requests resulting in 404s -->

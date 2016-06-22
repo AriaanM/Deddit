@@ -39,7 +39,7 @@ a{
     border-radius:10px;
     padding: 20px;
     margin: 0px 0 30px 0;
-    background-color:gray;
+    background-color:#b8b8f9;
 }
 .container a {
     color: #111115;
@@ -225,7 +225,7 @@ nav.navbar navbar-inverse {
 }
 
 .post {
-    background-color:white;
+    background-color:#c2c2f0;
     margin:20px;
     padding:2px;
     border-style:solid;
@@ -237,8 +237,8 @@ nav.navbar navbar-inverse {
 
 .w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
 .w3-dropdown-hover:hover .w3-dropdown-content{display:block;z-index:1;}
-.w3-dropdown-content{cursor:auto;color:#000;background-color:#330000;display:none;position:absolute;min-width:100%;margin:;padding:0;top:46px}
+.w3-dropdown-content{cursor:auto;color:#000;background-color:#6666ff;display:none;position:absolute;min-width:100%;margin:;padding:0;top:46px}
 .w3-dropdown-content a{padding:6px;display:block}
-.w3-dropdown-content a:hover{background-color:#660000}
-.w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#900000!important}
+.w3-dropdown-content a:hover{background-color:#9999ff}
+.w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#3333ff!important}
 .w3-btn,.w3-btn-block{border:solid black 2px; border-radius:5%;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:normal;white-space:nowrap}
