@@ -42,7 +42,7 @@
 <?php if (Session::userIsLoggedIn()) : ?>
 	<?php if (View::checkForActiveController($filename, "user")) ?>
     			<?php if (Session::get("user_account_type") == 7) : ?>
-    			 <?php if (View::checkForActiveController($filename, "admin")) { echo ' class="active" ';} ?> 
+    			 <?php if (View::checkForActiveController($filename, "admin"))  ?> 
        				<a href="<?php echo Config::get('URL'); ?>admin/">Admin</a>
        				<a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>	
     				
